@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './index.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const poruke = [
+    {
+    id: 1,
+    sadrzaj: 'HTML je jednostavan',
+    datum: '2019-05-30T17:30:31.098Z',
+    vazno: true
+    },
+    {
+    id: 2,
+    sadrzaj: 'React koristi JSX sintaksu',
+    datum: '2019-05-30T18:39:34.091Z',
+    vazno: false
+    },
+    {
+    id: 3,
+    sadrzaj: 'GET i POST su najvaznije metode HTTP protokola',
+    datum: '2019-05-30T19:20:14.298Z',
+    vazno: true
+    }
+    ]
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(<App poruke={poruke} />, document.getElementById('root'))
